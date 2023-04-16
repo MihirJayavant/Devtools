@@ -1,6 +1,6 @@
 import { Route, Routes } from "@solidjs/router";
 import type { Component } from "solid-js";
-import { Base64Page } from "./Base64Page";
+import { Base64EncoderPage } from "./Base64EncoderPage";
 import { Navbar } from "../Components/Navbar";
 
 export const HomePage: Component = () => {
@@ -11,7 +11,7 @@ export const HomePage: Component = () => {
       </header>
       <main class="m-3">
         <Routes>
-          <Route path="/base64" component={Base64Page} />
+          <Route path="/base64-encode" component={Base64EncoderPage} />
         </Routes>
       </main>
     </>
