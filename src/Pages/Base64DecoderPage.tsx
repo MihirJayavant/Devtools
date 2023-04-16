@@ -1,12 +1,13 @@
 import { Component, createSignal } from "solid-js";
 import { SimpleTextConvert } from "../Components/SimpleTextConvert";
 
-export const Base64EncoderPage: Component = () => {
+export const Base64DecoderPage: Component = () => {
   const [text, setText] = createSignal("");
   const [base64, setBase64] = createSignal("");
 
   const changeToBase64 = () => {
-    const result = btoa(text());
+    console.log(text());
+    const result = atob(text());
     setBase64(result);
   };
 

@@ -29,6 +29,9 @@ export const Navbar: Component = () => {
           <A class="navbar-item" activeClass="is-active" href="/base64-encode">
             Base64 Encoder
           </A>
+          <A class="navbar-item" activeClass="is-active" href="/base64-decode">
+            Base64 Decoder
+          </A>
         </div>
       </div>
     </nav>
