@@ -21,10 +21,6 @@ const InternalTranformerPage = (transformer: ITransformer) => {
   );
 };
 
-// function escapeString(str: string) {
-//   return str.replace(/[\\'"]/g, "\\$&");
-// }
-
 export const TransformerPage = (transformer: ITransformer) => {
   let render = InternalTranformerPage(transformer);
   return () => render;

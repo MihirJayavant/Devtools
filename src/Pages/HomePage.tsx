@@ -3,6 +3,7 @@ import type { Component } from "solid-js";
 import { TransformerPage } from "./TranformerPage";
 import { Navbar } from "../Components/Navbar";
 import { Base64Decoder, Base64Encoder } from "../core/base64";
+import { StringEscape } from "../core/escape";
 
 export const HomePage: Component = () => {
   return (
@@ -19,6 +20,10 @@ export const HomePage: Component = () => {
           <Route
             path="/base64-decode"
             component={TransformerPage(new Base64Decoder())}
+          />
+          <Route
+            path="/string-escape"
+            component={TransformerPage(new StringEscape())}
           />
         </Routes>
       </main>
