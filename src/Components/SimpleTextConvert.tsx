@@ -1,10 +1,11 @@
-import { Component } from "solid-js";
+import { Component } from 'solid-js';
 
 interface IProps {
   onClick: () => void;
   text1Value: string;
   text1Change: (value: string) => void;
   text2Value: string;
+  buttonText: string;
 }
 
 export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
@@ -16,12 +17,12 @@ export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
           placeholder="Enter string"
           rows={5}
           value={props.text1Value}
-          onchange={(e) => props.text1Change(e.target.value)}
+          onchange={e => props.text1Change(e.target.value)}
         ></textarea>
       </div>
       <div class="column is-12">
         <button class="button is-primary" onClick={props.onClick}>
-          Encode
+          {props.buttonText}
         </button>
       </div>
       <div class="column is-12">

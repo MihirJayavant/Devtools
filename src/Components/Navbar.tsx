@@ -1,13 +1,9 @@
-import { A } from "@solidjs/router";
-import { Component } from "solid-js";
+import { A } from '@solidjs/router';
+import { Component } from 'solid-js';
 
 export const Navbar: Component = () => {
   return (
-    <nav
-      class="navbar is-fixed-top is-danger"
-      role="navigation"
-      aria-label="main navigation"
-    >
+    <nav class="navbar is-fixed-top is-danger" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <div class="navbar-item">DevTools</div>
 
@@ -34,6 +30,9 @@ export const Navbar: Component = () => {
           </A>
           <A class="navbar-item" activeClass="is-active" href="/string-escape">
             String Escape
+          </A>
+          <A class="navbar-item" activeClass="is-active" href="/string-unescape">
+            String Unescape
           </A>
         </div>
       </div>
