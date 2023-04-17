@@ -1,7 +1,10 @@
 import { A } from '@solidjs/router';
-import { Component } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
 export const Navbar: Component = () => {
+  const [isNavOpen, toggleNav] = createSignal(false);
+  const navClass = () => (isNavOpen() ? 'is-active' : '');
+
   return (
     <nav class="navbar is-fixed-top is-danger" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -9,10 +12,10 @@ export const Navbar: Component = () => {
 
         <a
           role="button"
-          class="navbar-burger"
+          class={'navbar-burger ' + navClass()}
           aria-label="menu"
-          aria-expanded="false"
-          data-target="navbar"
+          aria-expanded={isNavOpen()}
+          onClick={() => toggleNav(state => !state)}
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -20,7 +23,7 @@ export const Navbar: Component = () => {
         </a>
       </div>
 
-      <div id="navbar" class="navbar-menu">
+      <div id="navbar" class={'navbar-menu ' + navClass()}>
         <div class="navbar-start">
           <A class="navbar-item" activeClass="is-active" href="/base64-encode">
             Base64 Encoder
@@ -33,6 +36,9 @@ export const Navbar: Component = () => {
           </A>
           <A class="navbar-item" activeClass="is-active" href="/string-unescape">
             String Unescape
+          </A>
+          <A class="navbar-item" activeClass="is-active" href="/json-format">
+            JSON Formatter
           </A>
         </div>
       </div>

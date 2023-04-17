@@ -3,6 +3,7 @@ import type { Component } from 'solid-js';
 import { Navbar } from '../Components/Navbar';
 import { Base64Encoder, Base64Decoder, StringEscape, StringUnEscape } from '../core';
 import { TransformerPage } from './TranformerPage';
+import { JsonFormatterPage } from './JsonFormatterPage';
 
 export const HomePage: Component = () => {
   return (
@@ -16,6 +17,7 @@ export const HomePage: Component = () => {
           <Route path="/base64-decode" component={TransformerPage(new Base64Decoder())} />
           <Route path="/string-escape" component={TransformerPage(new StringEscape())} />
           <Route path="/string-unescape" component={TransformerPage(new StringUnEscape())} />
+          <Route path="/json-format" component={JsonFormatterPage} />
         </Routes>
       </main>
     </>
