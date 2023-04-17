@@ -1,10 +1,11 @@
 import { Route, Routes } from '@solidjs/router';
-import type { Component } from 'solid-js';
+import { Component, lazy } from 'solid-js';
 import { Navbar } from '../Components/Navbar';
 import { Base64Encoder, Base64Decoder, StringEscape, StringUnEscape } from '../core';
 import { TransformerPage } from './TranformerPage';
-import { JsonFormatterPage } from './JsonFormatterPage';
 import { HomePage } from './HomePage';
+
+const JsonFormatterPage = lazy(() => import('./JsonFormatterPage'));
 
 export const RoutePage: Component = () => {
   return (
