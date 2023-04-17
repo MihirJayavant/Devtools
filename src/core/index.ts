@@ -1,3 +1,3 @@
 export * from './ITransformer'
-export * from './Base64'
-export * from './Escape'
+export * from './base64'
+export * from './escape'
