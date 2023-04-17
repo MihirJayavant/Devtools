@@ -18,5 +18,5 @@ export const JsonEditor: Component<IProps> = (props: IProps) => {
     editor()?.set(props.json);
   });
 
-  return <div style="width:100%;height:500px" ref={container}></div>;
+  return <div style="width:100%;height:100%" ref={container}></div>;
 };

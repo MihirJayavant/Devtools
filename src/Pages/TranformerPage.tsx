@@ -13,10 +13,10 @@ const InternalTranformerPage = (transformer: ITransformer) => {
 
   return (
     <SimpleTextConvert
-      text1Value={text()}
-      text1Change={setText}
+      text={text()}
+      onTextChange={setText}
       onClick={convert}
-      text2Value={resultText()}
+      result={resultText()}
       buttonText={transformer.buttonText}
     />
   );

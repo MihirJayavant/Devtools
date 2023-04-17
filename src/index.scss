@@ -1,2 +1,10 @@
 @import '../node_modules/bulma/bulma.sass';
-@import '../node_modules//jsoneditor/dist/jsoneditor.min.css'
+@import '../node_modules//jsoneditor/dist/jsoneditor.min.css';
+
+.h90 {
+  height: 90vh;
+}
+
+.w100 {
+  width: 100%;
+}

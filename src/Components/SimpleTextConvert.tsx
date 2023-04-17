@@ -2,35 +2,33 @@ import { Component } from 'solid-js';
 
 interface IProps {
   onClick: () => void;
-  text1Value: string;
-  text1Change: (value: string) => void;
-  text2Value: string;
+  text: string;
+  onTextChange: (value: string) => void;
+  result: string;
   buttonText: string;
 }
 
 export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
   return (
     <div class="columns is-multiline">
-      <div class="column is-12">
+      <div class="column">
         <textarea
-          class="textarea is-danger"
+          class="textarea is-danger has-fixed-size h90"
           placeholder="Enter string"
-          rows={5}
-          value={props.text1Value}
-          onchange={e => props.text1Change(e.target.value)}
+          value={props.text}
+          onchange={e => props.onTextChange(e.target.value)}
         ></textarea>
       </div>
-      <div class="column is-12">
+      <div class="column is-narrow">
         <button class="button is-primary" onClick={props.onClick}>
           {props.buttonText}
         </button>
       </div>
-      <div class="column is-12">
+      <div class="column">
         <textarea
-          class="textarea is-danger"
+          class="textarea is-danger has-fixed-size h90"
           placeholder="Base 64 encoded"
-          rows={5}
-          value={props.text2Value}
+          value={props.result}
           readOnly
         ></textarea>
       </div>

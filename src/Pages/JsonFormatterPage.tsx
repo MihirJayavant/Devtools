@@ -18,9 +18,8 @@ export const JsonFormatterPage: Component = () => {
     <div class="columns is-multiline">
       <div class="column is-5">
         <textarea
-          class="textarea is-danger"
-          placeholder="Enter string"
-          rows={5}
+          class="textarea is-danger h90"
+          placeholder="Enter Valid JSON"
           value={text()}
           onchange={e => setText(e.target.value)}
         ></textarea>
@@ -31,7 +30,9 @@ export const JsonFormatterPage: Component = () => {
         </button>
       </div>
       <div class="column">
-        <JsonEditor json={result()} />
+        <div class="w100" style="height:86vh">
+          <JsonEditor json={result()} />
+        </div>
       </div>
     </div>
   );

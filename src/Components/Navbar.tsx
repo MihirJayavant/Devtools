@@ -25,21 +25,31 @@ export const Navbar: Component = () => {
 
       <div id="navbar" class={'navbar-menu ' + navClass()}>
         <div class="navbar-start">
-          <A class="navbar-item" activeClass="is-active" href="/base64-encode">
-            Base64 Encoder
-          </A>
-          <A class="navbar-item" activeClass="is-active" href="/base64-decode">
-            Base64 Decoder
-          </A>
-          <A class="navbar-item" activeClass="is-active" href="/string-escape">
-            String Escape
-          </A>
-          <A class="navbar-item" activeClass="is-active" href="/string-unescape">
-            String Unescape
-          </A>
-          <A class="navbar-item" activeClass="is-active" href="/json-format">
-            JSON Formatter
-          </A>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Encoder / Decoder</a>
+            <div class="navbar-dropdown">
+              <A class="navbar-item" activeClass="is-active" href="/base64-encode">
+                Base64 Encoder
+              </A>
+              <A class="navbar-item" activeClass="is-active" href="/base64-decode">
+                Base64 Decoder
+              </A>
+              <A class="navbar-item" activeClass="is-active" href="/string-escape">
+                String Escape
+              </A>
+              <A class="navbar-item" activeClass="is-active" href="/string-unescape">
+                String Unescape
+              </A>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">JSON</a>
+            <div class="navbar-dropdown">
+              <A class="navbar-item" activeClass="is-active" href="/json-format">
+                JSON Formatter
+              </A>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
