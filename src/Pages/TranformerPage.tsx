@@ -7,8 +7,12 @@ const InternalTranformerPage = (transformer: ITransformer) => {
   const [resultText, setResultText] = createSignal('');
 
   const convert = () => {
-    const result = transformer.transform(text());
-    setResultText(result);
+    try {
+      const result = transformer.transform(text());
+      setResultText(result);
+    } catch (error) {
+      console.error({ error });
+    }
   };
 
   return (
@@ -17,7 +21,7 @@ const InternalTranformerPage = (transformer: ITransformer) => {
       onTextChange={setText}
       onClick={convert}
       result={resultText()}
-      buttonText={transformer.buttonText}
+      metaData={transformer.text}
     />
   );
 };

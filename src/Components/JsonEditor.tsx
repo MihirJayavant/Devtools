@@ -10,7 +10,7 @@ export const JsonEditor: Component<IProps> = (props: IProps) => {
   const [editor, setEditor] = createSignal<JSONEditor>();
 
   onMount(() => {
-    const result = new JSONEditor(container, {});
+    const result = new JSONEditor(container, { mode: 'view' });
     setEditor(result);
   });
 

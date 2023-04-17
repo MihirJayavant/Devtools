@@ -1,5 +1,9 @@
 export interface ITransformer {
   name: string
   transform: (input: string) => string
-  buttonText: string
+  text: {
+    button: string
+    textPlaceholder: string
+    resultPlaceholder: string
+  }
 }

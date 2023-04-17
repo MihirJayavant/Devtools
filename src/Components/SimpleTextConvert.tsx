@@ -5,7 +5,11 @@ interface IProps {
   text: string;
   onTextChange: (value: string) => void;
   result: string;
-  buttonText: string;
+  metaData: {
+    button: string;
+    textPlaceholder: string;
+    resultPlaceholder: string;
+  };
 }
 
 export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
@@ -14,20 +18,20 @@ export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
       <div class="column">
         <textarea
           class="textarea is-danger has-fixed-size h90"
-          placeholder="Enter string"
+          placeholder={props.metaData.textPlaceholder}
           value={props.text}
           onchange={e => props.onTextChange(e.target.value)}
         ></textarea>
       </div>
       <div class="column is-narrow">
         <button class="button is-primary" onClick={props.onClick}>
-          {props.buttonText}
+          {props.metaData.button}
         </button>
       </div>
       <div class="column">
         <textarea
           class="textarea is-danger has-fixed-size h90"
-          placeholder="Base 64 encoded"
+          placeholder={props.metaData.resultPlaceholder}
           value={props.result}
           readOnly
         ></textarea>
