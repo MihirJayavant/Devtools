@@ -8,3 +8,11 @@
 .w100 {
   width: 100%;
 }
+
+.box-animate {
+  cursor: pointer;
+  transition-duration: 800ms;
+  &:hover {
+    transform: scale(0.8);
+  }
+}

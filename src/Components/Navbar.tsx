@@ -8,7 +8,11 @@ export const Navbar: Component = () => {
   return (
     <nav class="navbar is-fixed-top is-danger" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <div class="navbar-item">DevTools</div>
+        <div class="navbar-item">
+          <A class="has-text-white" href="/">
+            DevTools
+          </A>
+        </div>
 
         <a
           role="button"

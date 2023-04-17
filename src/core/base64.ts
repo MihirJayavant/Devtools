@@ -17,7 +17,7 @@ export class Base64Decoder implements ITransformer {
   text = {
     button: 'Decode',
     textPlaceholder: 'Enter Valid Base64 String Here',
-    resultPlaceholder: 'Result'
+    resultPlaceholder: 'Decoded String Result'
   }
   transform(input: string) {
     return atob(input);
