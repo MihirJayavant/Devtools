@@ -4,6 +4,7 @@ import { environment as prod } from "./environment.prod";
 const env = process.env.NODE_ENV
 
 function getEnv() {
+  console.log({ env })
   if (env === 'production') {
     return prod
   } else {
