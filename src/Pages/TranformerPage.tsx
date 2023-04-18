@@ -16,13 +16,15 @@ const InternalTranformerPage = (transformer: ITransformer) => {
   };
 
   return (
-    <SimpleTextConvert
-      text={text()}
-      onTextChange={setText}
-      onClick={convert}
-      result={resultText()}
-      metaData={transformer.text}
-    />
+    <div class="m-2">
+      <SimpleTextConvert
+        text={text()}
+        onTextChange={setText}
+        onClick={convert}
+        result={resultText()}
+        metaData={transformer.text}
+      />
+    </div>
   );
 };
 
