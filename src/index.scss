@@ -11,8 +11,8 @@
 
 .box-animate {
   cursor: pointer;
-  transition-duration: 800ms;
+  transition-duration: 600ms;
   &:hover {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }

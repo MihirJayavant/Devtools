@@ -10,7 +10,7 @@ export const Navbar: Component = () => {
       <div class="navbar-brand">
         <div class="navbar-item">
           <A class="has-text-white" href="/">
-            DevTools
+            Dev Essentials
           </A>
         </div>
 
