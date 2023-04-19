@@ -14,8 +14,8 @@ interface IProps {
 
 export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
   return (
-    <div class="columns is-multiline">
-      <div class="column">
+    <div class="columns is-centered">
+      <div class="column is-5">
         <textarea
           class="textarea is-danger has-fixed-size h90"
           placeholder={props.metaData.textPlaceholder}
@@ -28,7 +28,7 @@ export const SimpleTextConvert: Component<IProps> = (props: IProps) => {
           {props.metaData.button}
         </button>
       </div>
-      <div class="column">
+      <div class="column is-5">
         <textarea
           class="textarea is-danger has-fixed-size h90"
           placeholder={props.metaData.resultPlaceholder}

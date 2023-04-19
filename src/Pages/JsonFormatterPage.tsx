@@ -15,8 +15,8 @@ export const JsonFormatterPage: Component = () => {
   };
 
   return (
-    <div class="m-2">
-      <div class="columns is-multiline">
+    <div class="m-4">
+      <div class="columns is-centered">
         <div class="column is-5">
           <textarea
             class="textarea is-danger h90"
@@ -30,7 +30,7 @@ export const JsonFormatterPage: Component = () => {
             Format
           </button>
         </div>
-        <div class="column">
+        <div class="column is-5">
           <div class="w100 h90">
             <JsonEditor json={result()} />
           </div>
