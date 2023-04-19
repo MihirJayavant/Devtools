@@ -1,6 +1,5 @@
 import { Component, createSignal, lazy } from 'solid-js';
-
-const JsonEditor = lazy(() => import('../Components/JsonEditor'));
+import { JsonEditor } from '../Components/JsonEditor';
 
 export const JsonFormatterPage: Component = () => {
   const [text, setText] = createSignal('');
@@ -32,7 +31,7 @@ export const JsonFormatterPage: Component = () => {
           </button>
         </div>
         <div class="column">
-          <div class="w100" style="height:86vh">
+          <div class="w100 h90">
             <JsonEditor json={result()} />
           </div>
         </div>
@@ -40,5 +39,3 @@ export const JsonFormatterPage: Component = () => {
     </div>
   );
 };
-
-export default JsonFormatterPage;
