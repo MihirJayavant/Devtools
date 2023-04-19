@@ -4,8 +4,7 @@ import { Navbar } from '../Components/Navbar';
 import { Base64Encoder, Base64Decoder, StringEscape, StringUnEscape } from '../core';
 import { TransformerPage } from './TranformerPage';
 import { HomePage } from './HomePage';
-
-const JsonFormatterPage = lazy(() => import('./JsonFormatterPage'));
+import { JsonFormatterPage } from './JsonFormatterPage';
 
 export const RoutePage: Component = () => {
   return (

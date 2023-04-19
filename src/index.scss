@@ -1,8 +1,9 @@
 @import '../node_modules/bulma/bulma.sass';
-@import '../node_modules//jsoneditor/dist/jsoneditor.min.css';
+@import './css/atom-one-light.min.css';
 
 .h90 {
   height: 90vh;
+  max-height: 90vh !important;
 }
 
 .w100 {
@@ -11,8 +12,24 @@
 
 .box-animate {
   cursor: pointer;
+  min-height: 180px;
   transition-duration: 600ms;
   &:hover {
     transform: scale(0.9);
   }
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.border {
+  border: 1px solid $danger;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: white;
+  padding: 0px;
 }

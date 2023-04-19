@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ff3860" />
-    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
-    <title>Dev Essentials</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="has-navbar-fixed-top">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
 
-    <script src="/src/index.tsx" type="module"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE404PBYKH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ff3860" />
+  <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+  <title>Dev Essentials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="/js/highlight.min.js"></script>
+</head>
 
-      gtag('config', 'G-NE404PBYKH');
-    </script>
-  </body>
+<body class="has-navbar-fixed-top">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script src="/src/index.tsx" type="module"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE404PBYKH"></script>
+  <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NE404PBYKH');
+  </script>
+</body>
+
 </html>

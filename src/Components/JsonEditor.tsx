@@ -1,5 +1,4 @@
-import { Component, createEffect, createSignal, onMount } from 'solid-js';
-import JSONEditor from 'jsoneditor';
+import { Component, createEffect } from 'solid-js';
 
 interface IProps {
   json: any;
@@ -7,18 +6,15 @@ interface IProps {
 
 export const JsonEditor: Component<IProps> = (props: IProps) => {
   let container: any;
-  const [editor, setEditor] = createSignal<JSONEditor>();
-
-  onMount(() => {
-    const result = new JSONEditor(container, { mode: 'view' });
-    setEditor(result);
-  });
 
   createEffect(() => {
-    editor()?.set(props.json);
+    container.innerHTML = JSON.stringify(props.json || {}, null, 2);
+    (window as any).hljs.highlightElement(container);
   });
 
-  return <div style="width:100%;height:100%" ref={container}></div>;
+  return (
+    <pre class="full border">
+      <code class="full language-json" ref={container}></code>
+    </pre>
+  );
 };
-
-export default JsonEditor;
