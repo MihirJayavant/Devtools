@@ -52,6 +52,9 @@ export const Navbar: Component = () => {
               <A class="navbar-item" activeClass="is-active" href="/json-format">
                 JSON Formatter
               </A>
+              <A class="navbar-item" activeClass="is-active" href="/js-to-json">
+                JS to JSON
+              </A>
             </div>
           </div>
         </div>
