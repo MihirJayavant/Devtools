@@ -16,7 +16,7 @@ const InternalTranformerPage = (transformer: ITransformer) => {
   };
 
   return (
-    <div class="m-2">
+    <div class="m-4">
       <SimpleTextConvert
         text={text()}
         onTextChange={setText}

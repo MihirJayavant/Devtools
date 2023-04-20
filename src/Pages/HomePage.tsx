@@ -51,6 +51,14 @@ export const HomePage: Component = () => {
             href="/json-format"
           />
         </div>
+        <div class="column is-3">
+          <Box
+            title="JS Object to JSON"
+            description="Convert javascript object to json"
+            icon="fa-code"
+            href="/js-to-json"
+          />
+        </div>
       </div>
     </>
   );

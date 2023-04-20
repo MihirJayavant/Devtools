@@ -1,7 +1,14 @@
 import { Route, Routes } from '@solidjs/router';
 import { Component, lazy } from 'solid-js';
 import { Navbar } from '../Components/Navbar';
-import { Base64Encoder, Base64Decoder, StringEscape, StringUnEscape } from '../core';
+import {
+  Base64Encoder,
+  Base64Decoder,
+  StringEscape,
+  StringUnEscape,
+  JsonFormatter,
+  JstoJson,
+} from '../core';
 import { TransformerPage } from './TranformerPage';
 import { HomePage } from './HomePage';
 import { JsonFormatterPage } from './JsonFormatterPage';
@@ -18,7 +25,8 @@ export const RoutePage: Component = () => {
         <Route path="/base64-decode" component={TransformerPage(new Base64Decoder())} />
         <Route path="/string-escape" component={TransformerPage(new StringEscape())} />
         <Route path="/string-unescape" component={TransformerPage(new StringUnEscape())} />
-        <Route path="/json-format" component={JsonFormatterPage} />
+        <Route path="/json-format" component={JsonFormatterPage(new JsonFormatter())} />
+        <Route path="/js-to-json" component={JsonFormatterPage(new JstoJson())} />
       </Routes>
       <footer class="footer">
         <div class="content has-text-centered">
